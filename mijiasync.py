@@ -15,7 +15,7 @@ def rawtime():
     
     ctime = round(time.time()) + gmtoffs
     
-    return struct.pack('<IB', ctime, gmtoffh)
+    return struct.pack('<Ib', ctime, gmtoffh)
 
 for device in devices:
     ch = []
