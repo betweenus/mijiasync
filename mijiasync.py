@@ -46,7 +46,7 @@ for device in devices:
     
     if ch[0].read() != rawtime():
         tolog(device, 'Synchronizing...')
-        ch[0].write(rawtime())
+        ch[0].write(rawtime(), withResponse = True)
     else:
         tolog(device, 'No need to sync')
         
